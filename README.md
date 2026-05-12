@@ -11,7 +11,6 @@
   <img src="https://img.shields.io/badge/Coverage-95%25+-22c55e?style=flat-square" />
   <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=flat-square&logo=docker&logoColor=white" />
 </p>
-
 <br/>
 
 > **DocMind** is a full-stack AI application that lets you upload PDFs, audio, and video files — then ask questions, get summaries, and jump to exact timestamps. Powered by Groq Llama 3 + Whisper and built with Django + React.
