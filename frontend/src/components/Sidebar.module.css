@@ -1,0 +1,184 @@
+.sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.brandIcon { font-size: 18px; color: var(--accent); }
+.brandName { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; }
+
+.userRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.username {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.logoutBtn {
+  font-size: 16px;
+  color: var(--text-muted);
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+.logoutBtn:hover { color: var(--text-primary); background: var(--bg-active); }
+
+.dropzone {
+  margin: 12px;
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  background: var(--bg-card);
+}
+.dropzone:hover { border-color: var(--accent); background: var(--accent-soft); }
+.dragActive { border-color: var(--accent); background: var(--accent-soft); }
+.uploading { cursor: not-allowed; opacity: 0.7; }
+
+.dropIcon { font-size: 20px; color: var(--text-secondary); }
+.dropText { font-size: 12px; color: var(--text-secondary); text-align: center; line-height: 1.4; }
+
+.uploadProgress {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  transition: width 0.2s;
+}
+
+.uploadError {
+  margin: 0 12px 8px;
+  font-size: 12px;
+  color: var(--error);
+  background: var(--error-soft);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+}
+
+.listHeader {
+  padding: 4px 16px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.count {
+  background: var(--bg-active);
+  border-radius: 99px;
+  padding: 1px 7px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0 8px 16px;
+}
+
+.loadingItem {
+  padding: 12px 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.docItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.12s;
+  position: relative;
+}
+.docItem:hover { background: var(--bg-hover); }
+.docItem:hover .deleteBtn { opacity: 1; }
+.active { background: var(--bg-active) !important; }
+
+.docIcon { font-size: 18px; flex-shrink: 0; }
+.docInfo { flex: 1; min-width: 0; }
+.docTitle {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.docMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+.docSize { font-size: 11px; color: var(--text-muted); }
+
+.statusBadge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 1px 6px;
+  border-radius: 99px;
+}
+.pending { background: #f3f4f6; color: #6b7280; }
+.processing { background: var(--warning-soft); color: var(--warning); }
+.ready { background: var(--success-soft); color: var(--success); }
+.failed { background: var(--error-soft); color: var(--error); }
+
+.deleteBtn {
+  opacity: 0;
+  font-size: 18px;
+  color: var(--text-muted);
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: opacity 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+.deleteBtn:hover { color: var(--error); }
